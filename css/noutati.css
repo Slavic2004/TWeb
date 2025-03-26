@@ -1,0 +1,170 @@
+/* Stiluri generale */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Header stilizat */
+header {
+    background: #16213e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #0f3460;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+/* Container general */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+    background: #0f3460;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Centrarea titlului Noutăți din Fotbal */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #e94560;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Fiecare articol de tip "news" */
+.news {
+    background-color: #1a1a2e;
+    border: 1px solid #e94560;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.news:hover {
+    transform: scale(1.02);
+}
+
+/* Imagine din articol */
+.news img {
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.news img:hover {
+    transform: scale(1.05);
+}
+
+/* Conținut text */
+.news-content {
+    flex: 1;
+}
+
+.news-content h3 {
+    margin-top: 0;
+    color: #e94560;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.news-content p {
+    margin: 12px 0 0;
+    color: #e0e0e0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Alte secțiuni */
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.football-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.football-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsivitate */
+@media screen and (max-width: 768px) {
+    .news {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news img {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
