@@ -12,10 +12,10 @@
     </header>
     
     <nav>
-        <a href="index.html">Acasă</a>
-        <a href="noutati.html">Noutăți</a>
-        <a href="meciuri.html">Meciuri</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.php">Acasă</a>
+        <a href="noutati.php">Noutăți</a>
+        <a href="meciuri.php">Meciuri</a>
+        <a href="contact.php">Contact</a>
     </nav>
 
     <div class="container">
