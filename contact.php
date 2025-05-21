@@ -39,21 +39,24 @@
         </div>
 
         <h2>Formular de Contact</h2>
-        <form action="save_contact.php" method="POST">
-            <label for="name">Nume:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+        <form id="contactForm" method="POST">
+    <label for="name">Nume:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-            <label for="message">Mesaj:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    <label for="message">Mesaj:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-            <input type="submit" value="Trimite">
-        </form>
+    <input type="submit" value="Trimite">
+    </form>
+
+    <div id="response"></div> <!-- Pentru răspunsul serverului -->
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/contact.js"></script>
-
 
     <footer>
         <p>&copy; 2025 Sport Bet. Toate drepturile rezervate.</p>

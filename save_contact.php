@@ -1,10 +1,10 @@
 <?php
-// Preia datele din formular
+// Preia datele trimise prin POST
 $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
 $message = $_POST['message'] ?? '';
 
-// Creează un array asociativ
+// Creează un array cu datele
 $data = [
     'name' => $name,
     'email' => $email,
@@ -12,8 +12,10 @@ $data = [
     'timestamp' => date('Y-m-d H:i:s')
 ];
 
-// Citește conținutul actual din fișierul JSON
+// Numele fișierului
 $file = 'contacts.json';
+
+// Citește fișierul existent
 $contacts = [];
 
 if (file_exists($file)) {
@@ -21,13 +23,14 @@ if (file_exists($file)) {
     $contacts = json_decode($json, true) ?? [];
 }
 
-// Adaugă noul contact
+// Adaugă noua înregistrare
 $contacts[] = $data;
 
-// Salvează înapoi în fișierul JSON
-file_put_contents($file, json_encode($contacts, JSON_PRETTY_PRINT));
-
-// Redirecționează utilizatorul către index.php
-header("Location: index.php");
-exit;
+// Scrie în fișier
+if (file_put_contents($file, json_encode($contacts, JSON_PRETTY_PRINT))) {
+    echo "Mesaj trimis cu succes!";
+} else {
+    http_response_code(500);
+    echo "Eroare la salvarea mesajului.";
+}
 ?>
