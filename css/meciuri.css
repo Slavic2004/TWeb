@@ -98,3 +98,13 @@ tr:hover {
 }
 
 
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#matchesTable tr {
+    transition: background-color 0.3s;
+}
